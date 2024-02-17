@@ -1,0 +1,21 @@
+[project]
+name = "django_blog"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "dianp", email = "dprasmail@gmail.com"},
+]
+dependencies = [
+    "django>=5.0.2",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+create = "django-admin startproject {args}"
+dev = "python src/manage.py runserver"
