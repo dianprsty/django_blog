@@ -6,5 +6,6 @@ pkgs.mkShell {
 		python311
 		python311Packages.pip
 		pkgs.pdm
+		pkgs.sqlite
 	];
 }
