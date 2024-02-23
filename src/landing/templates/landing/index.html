@@ -1,31 +1,23 @@
-{% extends "base.html" %} {% load static %}
+{% extends "base.html" %} 
+{% load static %}
 
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
-    <title>Home</title>
-    <meta name="description" content="" />
-    <link rel="stylesheet" type="text/css" href="{% static "css/output.css" %}">
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    {% block content %}
-    <h2>Content for My App</h2>
-    <p>Stuff etc etc.</p>
-    <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
-    <dialog id="my_modal_2" class="modal">
-      <div class="modal-box">
-        <h3 class="font-bold text-lg">Hello!</h3>
-        <p class="py-4">Press ESC key or click outside to close</p>
-      </div>
-      <form method="dialog" class="modal-backdrop">
-        <button>close</button>
-      </form>
-    </dialog>
-    {% endblock content %}
-  </body>
-</html>
+{% block title %}Home{% endblock %} 
+
+{% block navbar %}
+{% include "navbar.html" %} 
+{% endblock navbar %} 
+
+{% block content %}
+<div class="w-screen  ">
+    <div class="w-10/12 h-screen m-auto flex flex-col lg:flex-row justify-between items-center">
+        <div class="w-full lg:w-5/12 flex flex-col gap-4">
+            <h1 class="text-5xl font-bold ">Welcome To My Blog</h1>
+            <p class="text-xl text-slate-700" >Hello, this is my personal blog. I will share my thought about everything. </p>
+            <a class="btn btn-primary max-w-fit" href="{% url "blog" %}">Explore</a>
+        </div>
+        <div class="w-full lg:w-6/12 object-contain order-1 lg:order-2">
+            <img src="{% static 'images/hero_image.png' %}" alt="hero image" >
+        </div>
+    </div>
+</div>
+{% endblock content %}

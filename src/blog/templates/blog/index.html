@@ -1,1 +1,51 @@
-<div>Blog Template</div>
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %}Home{% endblock %} 
+
+{% block navbar %}
+{% include "navbar.html" %} 
+{% endblock navbar %} 
+
+{% block content %}
+<div class="w-screen min-h-screen pt-28 pb-8 bg-slate-100">
+    <div class="w-10/12 lg:w-6/12  m-auto flex flex-col gap-8  justify-between items-center">
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+
+        <div class="flex card glass bg-blue-400 flex-col gap-2 p-4">
+            <h2 class="text-2xl font-bold">Judul Artikel</h2>
+            <p class="text-ellipsis line-clamp-3 text-justify">{% lorem 2 b random %}</p>
+        </div>
+        
+       
+    </div>
+</div>
+{% endblock content %}
