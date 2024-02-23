@@ -7,5 +7,6 @@ pkgs.mkShell {
 		python311Packages.pip
 		pkgs.pdm
 		pkgs.sqlite
+		pkgs.nodejs_20
 	];
 }

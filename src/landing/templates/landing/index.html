@@ -1,1 +1,31 @@
-<div>Landing Template</div>
+{% extends "base.html" %} {% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <title>Home</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/output.css" %}">
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    {% block content %}
+    <h2>Content for My App</h2>
+    <p>Stuff etc etc.</p>
+    <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
+    <dialog id="my_modal_2" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press ESC key or click outside to close</p>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+    {% endblock content %}
+  </body>
+</html>

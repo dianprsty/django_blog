@@ -20,5 +20,6 @@ distribution = false
 [tool.pdm.scripts]
 create = "django-admin startproject {args}"
 dev = "python src/manage.py runserver"
-cmd = "python src/manage.py"
-granian-wsgi = "granian --interface wsgi src/blog.wsgi:application"
+start-app = "python manage.py startapp"
+cmd = "python manage.py"
+granian-wsgi = "granian --interface wsgi blog.wsgi:application"
