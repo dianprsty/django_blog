@@ -163,3 +163,4 @@ cython_debug/
 
 blog_old/
 **/node_modules/
+src/static/css/output.css
